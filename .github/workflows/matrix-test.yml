@@ -1,13 +1,11 @@
-name: Matrix Strategy Test
+name: "Matrix Test Strategy"
 on:
   # Manual trigger
   workflow_dispatch:
 
-defaults:
-  run:
-    shell: bash
+
 jobs:
-  build:
+  matrix:
     name:   ${{matrix.runner}} - ${{ matrix.environment }}
     runs-on: [ '${{ matrix.runner }}']
     strategy:
